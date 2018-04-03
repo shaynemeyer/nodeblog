@@ -1,0 +1,72 @@
+Arguments: 
+  /Users/shaynemeyer/.nvm/versions/node/v8.9.4/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js test --coverage
+
+PATH: 
+  /usr/local/opt/opencv3/bin:/Users/shaynemeyer/.local/bin:/Users/shaynemeyer/.nvm/versions/node/v8.9.4/bin:/Users/shaynemeyer/.nvm/versions/node:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/Users/Shared/Git/SeleniumProject/lib/geckodriver:/Users/Shared/Git/SeleniumProject/lib/chromedriver:/Users/shaynemeyer/go/bin:/usr/local/opt/go/libexec/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.9.4
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "server": "nodemon index.js --ignore tests",
+      "client": "npm run start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\"",
+      "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+      "heroku-postbuild": "npm run build",
+      "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "aws-sdk": "^2.188.0",
+      "body-parser": "^1.17.2",
+      "concurrently": "^3.5.0",
+      "cookie-session": "^2.0.0-beta.2",
+      "express": "^4.15.3",
+      "jest": "^22.1.4",
+      "migrate-mongoose": "^3.2.2",
+      "mongoose": "^4.11.1",
+      "nodemon": "^1.11.0",
+      "passport": "^0.3.2",
+      "passport-google-oauth20": "^1.0.0",
+      "path-parser": "^2.0.2",
+      "puppeteer": "^1.0.0",
+      "redis": "^2.8.0",
+      "uuid": "^3.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c jest --coverage
+  Directory: /Users/shaynemeyer/github/nodeblog
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
