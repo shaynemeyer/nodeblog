@@ -1,4 +1,4 @@
-jest.setTimeout(20000);
+jest.setTimeout(50000);
 
 require('../models/User');
 
